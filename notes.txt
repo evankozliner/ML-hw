@@ -1,0 +1,26 @@
+1.
+
+
+
+construct a gasussian with some parameters
+sample w1..wk points from gaussian with some pararmter
+construct feature map
+map data to fature map
+do linear regression to that map
+
+
+QUESTIONS:
+1) How can I optimize my code for question 2? There is no way I will find a suitable lambda and sigma at the rate is runs!
+2) I still don't think I understand the notion of a "feature map" is this like the matrix of gaussian values we get for question 2?
+3) I don't see how to use the fourier feature at all. Does it replace the kernel from problem 2?
+4) For the spline question, I found an article stating that SVM's were a special case of smooth splines? Is saying this enough? I don't understand their work
+5) Is a piecewise function good as a counterexample for 4?
+
+Use best sigma from 2 in problem 3
+
+spline is basically a polynomial kernel?
+check wikipedia
+
+X is k * n matrix
+W is D * k matrix
+Z is D by n 
