@@ -4,6 +4,9 @@
 2. 
 	My error rate was 2% on this question, however my computing power is fairly limited. 
 	As sigma approaches 0 we see that the error reaches 100% because the gaussian becomes sharper and similarities need to become more exact (see example on paper). As the sigma approaches infinity we notice that the error reaches 50% because the gaussian becomes fatter and therefore cannot differentiate between 7's and 9's.
+
+3 
+	The results came *significantly* faster.
 	
 construct a gasussian with some parameters
 sample w1..wk points from gaussian with some pararmter
