@@ -1,7 +1,7 @@
 function main()
-	%cross_validate([.0001, .001, .01, .1], 1:100:10000)
+	cross_validate([.0001, .001, .01, .1], 1:100:10000)
 	%cross_validate([.0001, .1], 1:100:200)
-	cross_validate([.0001], 100:100:100)
+	%cross_validate([.0001], 5000:5000:5000)
 end
 
 function cross_validate(lambdas, sigmas)

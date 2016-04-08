@@ -1,21 +1,15 @@
 1.
-	The SVM gets ~6.9% loss, while the least squares method gets ~6.5% loss. 
+	The SVM gets ~6.9% loss, while the least squares method gets ~6.5% loss. One explanation might be that the SVM, being able to pick up on more complex patterns,  picked up on a pattern in the training set causing it to overfit. 
 
-
-
+2. 
+	My error rate was 2% on this question, however my computing power is fairly limited. 
+	As sigma approaches 0 we see that the error reaches 100% because the gaussian becomes sharper and similarities need to become more exact (see example on paper). As the sigma approaches infinity we notice that the error reaches 50% because the gaussian becomes fatter and therefore cannot differentiate between 7's and 9's.
+	
 construct a gasussian with some parameters
 sample w1..wk points from gaussian with some pararmter
 construct feature map
 map data to fature map
 do linear regression to that map
-
-
-QUESTIONS:
-1) How can I optimize my code for question 2? There is no way I will find a suitable lambda and sigma at the rate is runs!
-2) I still don't think I understand the notion of a "feature map" is this like the matrix of gaussian values we get for question 2?
-3) I don't see how to use the fourier feature at all. Does it replace the kernel from problem 2?
-4) For the spline question, I found an article stating that SVM's were a special case of smooth splines? Is saying this enough? I don't understand their work
-5) Is a piecewise function good as a counterexample for 4?
 
 Use best sigma from 2 in problem 3
 
