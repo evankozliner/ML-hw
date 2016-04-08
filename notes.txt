@@ -1,4 +1,5 @@
 1.
+	The SVM gets ~6.9% loss, while the least squares method gets ~6.5% loss. 
 
 
 

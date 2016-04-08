@@ -1,7 +1,7 @@
 function main()
 	%cross_validate([.0001, .001, .01, .1], 1:100:10000)
 	%cross_validate([.0001, .1], 1:100:200)
-	cross_validate([.0001], 1:100:101)
+	cross_validate([.0001], 100:100:100)
 end
 
 function cross_validate(lambdas, sigmas)
@@ -35,13 +35,16 @@ function percent_err = get_err(lambda, variance)
 	y = 0;
 	labels = zeros(2000,1);
 
-	for j=1:2000
-		y = 0;
-		for i=1:2000
-			y = y + alpha(i,:) * test_kernel(i,j);
-		end
-		labels(j,:) = sign(y);
+	for i = 1:2000
+		labels(i,:) = sign(sum(alpha(:)' * test_kernel(:, i)));
 	end
+%	for j=1:2000
+%		y = 0;
+%		for i=1:2000
+%			y = y + alpha(i,:) * test_kernel(i,j);
+%		end
+%		labels(j,:) = sign(y);
+%	end
 	
 	%err = ((1000 - sum(labels(1:1000))) + (1000 + sum(labels(1:1000))))/20
 	num_err = 0;
@@ -54,7 +57,7 @@ function percent_err = get_err(lambda, variance)
 end
 
 function approx_kernel = rff()
-	
+		
 end
 
 function kernel = get_kernel(dimensions, variance, vectors, vectors2)
